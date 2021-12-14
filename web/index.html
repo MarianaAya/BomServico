@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+        <script src="js/LoginController.js" type="text/javascript"></script>
+        <script src="js/telaCategoriasController.js" type="text/javascript"></script>
+        <script src="js/telaAnuncioController.js" type="text/javascript"></script>
+    </head>
+    <body onload="CarregarHome();MostraAnuncios();MostrarCategoriasFiltro()">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-between">
+                <div class="w-50 d-flex flex-row fles-wrap" id="div-logo">
+                    <a class="navbar-brand" href=".">BomServiço</a>         
+                </div>
+                <div class="w-25 d-flex flex-row-reverse flex-wrap " id="div-controleLogin"> 
+                </div>
+            </nav>
+        </header>
+        <section class="div-objetivo text-center">
+            <div class="container">
+                <p class="lead text-muted">
+                    Encontre diversos profissionais! Utilize filtros para agilizar a sua pesquisa e encontre o profissional
+                    que mais se adeque à sua necessidade.
+                </p>
+            </div>
+        </section>
+        <div class="height-divPrincipal py-5 bg-light">
+            <div class="container">
+                <form class="text-center">
+                    <div class="form-row align-items-center">
+                        <div class="col-sm-3 my-1">
+                          <label class="sr-only" for="exampleFormControlInput1">Palavra-chave:</label>
+                          <input type="text" class="form-control" id="filtro" placeholder="Digite uma palavra">
+                        </div>
+                        <div class="col-sm-3 my-1">
+                            <label class="sr-only"  for="exampleFormControlSelect1">Categoria</label>
+                            <select class="form-control" id="select-categoria">
+                                <option value="">Selecione uma categoria</option>
+                                
+                            </select>
+                        </div>
+                        <div class="col-auto my-1">
+                            <button type="button" class="btn btn-secondary" onclick="MostraAnuncios()">Pesquisar</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="row mt-4" id="div-mostrarAnuncios">
+                    
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<!-- 
+O sistema Web a ser desenvolvido na disciplina consiste em um sistema resumido de classificados/ofertas de serviços. O sistema 
+deverá oferecer o cadastro de categorias de serviços (reparos, transporte, culinária, limpeza, etc..) e os classificados/anuncios 
+em si. O sistema contará com dois tipos de usuários, sendo o administrador e o prestador de serviço. O administrador terá acesso 
+a todos os cadastros do sistema e poderá incluir, excluir e alterar categorias e excluir anúncios. O prestador de serviço poderá 
+cadastrar seus dados e inserir, alterar e excluir seu anuncio/classificado que deverá ser único.
+
+     Na especificação do sistema, considere os seguintes módulos:
+
+     a) a página principal com o objetivo de apresentar o sistema e oferecer opções de busca por anúncios.
+     b) a página do anunciante (prestador de serviços), que necessariamente deverá ter seus dados pessoais.
+     c) a página de cadastro de anúncio/classificado de servico, onde um prestador já cadastrado pode montar seu anúncio, 
+colocando até 3 fotos, além da descrição, horários de atendimento, contato e outras informações que se torne necessária.
+     d) o módulo administrativo: que acessa os cadastros das categorias e opcionalmente demais informações que qualificam o 
+anuncio (ex: tipo região de atuação). e poderá também excluir anuncios de prestadores de serviços.
+     e) Uma API restful que retorna em JSON todos os anuncios de uma categoria de servicos. A categoria será passada por 
+parâmetro na chamada à API (url)
+   
+Tecnologia a ser utilizada:
+     lado cliente: HTML5, CSS, JS, AJAX/FETCH API, bibliotecas CSS/JS (Boot Strap, JQuery, ...)
+     lado servidor: JSP, Servlet, JDBC.
+
+-->

@@ -1,0 +1,30 @@
+body{
+    height:100vh;
+    overflow: auto;
+}
+header{
+    height: 8vh;
+}
+.height-min{
+    min-height:92vh;
+}
+.height-divPrincipal{
+    min-height:64vh;
+}
+.div-objetivo{
+    height:28vh;
+    background-color: #f2f2f2;
+    padding:5%;
+}
+.div-paginaAnuncio{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 15px;
+    background-color: #ffffff;
+}
+.text-left{
+    text-align: left;
+}
+.titulo-horario{
+    font-size:25px;
+}
+
